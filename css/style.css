@@ -1,0 +1,22 @@
+#rate-usd {
+  position: relative;
+  padding-left: 30px;
+}
+#rate-usd::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-style: solid;
+  top: calc(50% - 3px);
+  left: -20px;
+  border-width: 0 6px 6px 6px;
+  border-color: transparent;
+  transition: all 0.5s;
+}
+#rate-usd::before.up::before {
+  border-bottom-color: green;
+}
+#rate-usd::before.down::before {
+  transform: rotate(180deg);
+  border-bottom-color: red;
+}
